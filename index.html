@@ -257,6 +257,8 @@ Error message and password prompt
 
 <li>$:/core/ui/ViewTemplate/title</li>
 
+<li>$:/currentRealm</li>
+
 <li>$:/DefaultTiddlers</li>
 
 <li>$:/GitHub/Branch</li>
@@ -10760,6 +10762,9 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 &lt;/$reveal&gt;
 &lt;/div&gt;</pre>
 </div>
+<div title="$:/currentRealm">
+<pre>all</pre>
+</div>
 <div bag="default" created="20200106211749103" creator="ohdyno" modified="20201210153515818" modifier="ohdyno" revision="0" title="$:/DefaultTiddlers" type="text/vnd.tiddlywiki">
 <pre>[[Welcome]]
 </pre>
@@ -13269,8 +13274,8 @@ exports.context = contextWidget;
 <div created="20200418122101344" modified="20201208205715656" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Plugins</pre>
 </div>
-<div created="20200418121835270" creator="ohdyno" modified="20201210213616299" modifier="ohdyno" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20200418121835270" creator="ohdyno" modified="20201210213900305" modifier="ohdyno" title="$:/state/tab/sidebar--595412856">
+<pre>$:/plugins/gsd5/core/ui/sidebar/collect-sidebar</pre>
 </div>
 <div created="20200504200956301" creator="ohdyno" modified="20201210150836269" modifier="ohdyno" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -13293,7 +13298,7 @@ exports.context = contextWidget;
 <div bag="default" created="20201208210305488" modified="20201208210305488" revision="1" title="$:/status/UserName">
 <pre>ohdyno</pre>
 </div>
-<div created="20201210213606027" creator="ohdyno" list="$:/ControlPanel Welcome" modified="20201210213619427" modifier="ohdyno" title="$:/StoryList">
+<div created="20201210213606027" creator="ohdyno" list="[[Security group training notes]] [[Take security group training]] Dashboard" modified="20201210213905773" modifier="ohdyno" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200519141000553" list="$:/.giffmex/Buttons/more-tiddler-edit-actions $:/core/ui/Buttons/delete $:/core/ui/Buttons/cancel $:/core/ui/Buttons/save" modified="20200521145647980" tags="$:/giffmex/bigeditarea $:/giffmex/stroll" title="$:/tags/EditToolbar">
@@ -14742,7 +14747,7 @@ write down exactly what it is about the current stack that makes solving the pro
 <div created="20201127133135676" modified="20201127133217961" tags="Inbox" title="One reading code as investigation and not literature">
 <pre>http://www.gigamonkeys.com/code-reading/</pre>
 </div>
-<div created="20201210152033896" creator="ohdyno" gsd_project="Take security group training" gsd_realm="all" gsd_type="reference" modified="20201210154335194" modifier="ohdyno" title="Security group training notes">
+<div created="20201210152033896" creator="ohdyno" gsd_project="Take security group training" gsd_realm="all" gsd_type="reference" modified="20201210215403565" modifier="ohdyno" title="Security group training notes">
 <pre>! Definitions
 * ''security group'': a collection of accounts and/or other groups that are managed as a single unit and can be used to delegate permissions to resources (contrasts with assigning permissions to individual user).
 * ''security group portal'': web interface to manage security groups. It publishes security groups directly to enterprise directories.
@@ -14750,14 +14755,28 @@ write down exactly what it is about the current stack that makes solving the pro
 * ''displayed owner'': an owner displayed by other systems that show only one owner for the group.
 * a security group remains ''enabled'' as long as ''expiration date'' has not passed. An enabled group's information is published to enterprise directories ''including members''.
 * a ''disabled'' group removes members from enterprise directories.
-* 
+* each security group has an ''unique id''.
+* ''access review'':
+** Attest there is business need for the group.
+** Attest the group's information is appropriate and accurate
+** Attest to accepting the &quot;Security Group Portal Use Agreement&quot;
 
 ! Highlights
 * access to resources according to security groups is controlled by the owners of the ''resource''.
 * every security group must have at least ''two owners''.
 * owners must complete the required access review (audit) of a group at least once ''every 12 months''.
 * by default, the expiration date is set to be ''1 year'' in duration.
-* expiration date is *renewed* when an audit is complete.</pre>
+* expiration date is *renewed* when an audit is complete.
+* there is a ''60 day period'' to recover (via an audit) a ''deleted'' security group (upon request or expiration).
+* ''delete a group'' by issuing a delete request (but not through the delete button on the portal).
+
+! Security Group Fundamentals
+
+* Reuse security groups if appropriate - there is an limited number of groups that could be created in the enterprise directories.
+* People are automatically removed when their CDSIDs are deleted.
+* Renaming a group does not affect its ID.
+* Changes made to group will be reflected in enterprise directories within 1 hour. If it is not reflected after 2 hours, enter a ''Request Center ticket''.
+* If an user is added to or removed from a security group, ''the user must log off and log on'' so that their acquired credentials reflect the new membership.</pre>
 </div>
 <div created="20201210151749334" creator="ohdyno" gsd_complete="false" gsd_contact="" gsd_project="" gsd_realm="all" gsd_status="active" gsd_type="project" modified="20201210152644143" modifier="ohdyno" title="Take security group training">
 <pre></pre>
